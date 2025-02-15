@@ -22,8 +22,8 @@ title: "PyDevBase"
 email: "jy2193807541@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   码途钥匙
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/pydevbase" # the subpath of your site, e.g. /blog
+url: "htts://102300671.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  102300671
 
