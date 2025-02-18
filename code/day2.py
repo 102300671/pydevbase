@@ -7,6 +7,7 @@ class Day2:
 
     def one(self):
         print(self.result)
+        print(type(self.result))
 
     def two(self):
         print(f"我叫{self.my_name}，今年{self.my_age}岁，性别是{self.my_sex}")
