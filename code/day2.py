@@ -12,13 +12,16 @@ class Day2:
     def two(self):
         print(f"我叫{self.my_name}，今年{self.my_age}岁，性别是{self.my_sex}")
 
-    def three(self):
+    @staticmethod
+    def three():
         print("i=666是int\nf=123.456是float\nb1=True，b2=False和b3=1>2是bool")
 
-    def four(self):
+    @staticmethod
+    def four():
         print("关关雎鸠，在河之洲，窈窕淑女，君子好逑，\n参差荇菜，左右流之，窈窕淑女，寤寐求之。")
 
-    def five(self):
+    @staticmethod
+    def five():
         x = 10
         y = 5
         bool1 = x > y
