@@ -27,7 +27,7 @@ class Day2:
 
 day2 = Day2(30 - 15, "吕林涵", 19, "男")
 for _ in range(0, 5):
-    no = int(input("请输入作业编号:1,2,3,4,5:"))
+    no = int(input("请输入作业编号(1,2,3,4,5):"))
     if no == 1:
         day2.one()
     elif no == 2:
