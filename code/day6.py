@@ -1,0 +1,84 @@
+class Str:
+  def __init__(self,text,char=None):
+    self.text=text
+    self.char=char
+  def replace(self):
+    n=input("是否区分大小写(y/n):")
+    print(f"原字符串:{self.text}")
+    if n=='y':
+      self.text=self.text.replace(self.char,'*')
+    elif n=='n':
+      self.text=self.text.replace(self.char.upper(),'*')
+      self.text=self.text.replace(self.char.lower(),'*')
+    print(f"替换后:{self.text}")
+  def count(self):
+    upper=self.text.count(self.char.upper())
+    lower=self.text.count(self.char.lower())
+    print(f"{self.char.upper()}:{upper}个")
+    print(f"{self.char.lower()}:{lower}个")
+    print(f"总共:{upper+lower}个")
+  def upper(self):
+    words = self.text.split(" ")
+    for i in range(len(words)):
+        if words[i]:
+            words[i] = words[i][0].upper() + words[i][1:]
+    self.text = ' '.join(words)
+    print(self.text)
+class List:
+  def __init__(self):
+    self.cites=["北京","广州","波士顿","深圳","湖南","成都","洛杉矶","武汉","浙江","香港","澳门"]
+    self.fruits=["苹果","香蕉","橙子","葡萄"]
+  def list1(self):
+    print(self.cites)
+    self.cites.insert(1,"上海")
+    print(self.cites)
+    self.cites.remove("波士顿")
+    self.cites.remove("洛杉矶")
+    print(self.cites)
+    self.cites[3]="长沙"
+    self.cites[7]="杭州"
+    print(self.cites)
+    self.cites.append("台北")
+    print(self.cites)
+  def list2(self):
+    print(self.fruits)
+    self.fruits.append("榴莲")
+    print(self.fruits)
+    self.fruits.pop()
+    print(self.fruits)
+    self.fruits.remove("香蕉")
+    print(self.fruits)
+    for i in range(len(self.fruits)):
+      print(self.fruits[i])
+
+
+while True:
+  n=int(input("1:替换,2:统计,3:大写,4:cites,5:列表fruits,6:退出:"))
+  if n==1 or n==2:
+    while True:
+      text=input("输入字符串(输入0退出):")
+      if text=='0':
+        break
+      char=input("输入字符:")
+      str_obj=Str(text,char)
+      if n==1:
+        str_obj.replace()
+      elif n==2:
+        str_obj.count()
+  elif n==3:
+    while True:
+      text=input("输入字符串(输入0退出):")
+      if text=='0':
+        break
+      str=Str(text)
+      str.upper()
+  elif n==4 or n==5:
+    list=List()
+    if n==4:
+      list.list1()
+    elif n==5:
+      list.list2()
+  elif n==6:
+    break
+  
+        
