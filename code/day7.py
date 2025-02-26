@@ -1,0 +1,48 @@
+dic = {'k1': "v1", "k2": "v2", "k3": [11, 22, 33]}
+
+
+def d1():
+    print(dic)
+    dic["k4"] = "v4"
+    print(dic)
+    dic["k1"] = "alex"
+    print(dic)
+    dic["k3"].append(44)
+    print(dic)
+    dic["k3"].insert(0, 18)
+    print(dic)
+
+
+words = ["apple", "banana", "cherry"]
+
+
+def d2():
+    dic2 = {item: len(item) for item in words}
+    print(dic2)
+
+
+def d3():
+    odd = {num for num in range(1, 11, 2)}
+    print(odd)
+
+
+scores = {"Alice": 85, "Bob": 45, "Charlie": 90, "David": 55}
+
+
+def d4():
+    more_scores = {name: score for name, score in scores.items() if score > 50}
+    print(more_scores)
+
+
+for _ in range(4):
+    n = int(input("请输入1,2,3,4:"))
+    if n == 1:
+        d1()
+    elif n == 2:
+        d2()
+    elif n == 3:
+        d3()
+    elif n == 4:
+        d4()
+    else:
+        print("输入错误")
