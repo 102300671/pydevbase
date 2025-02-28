@@ -1,0 +1,30 @@
+import statistics
+
+
+def lstnum(lst):
+    print(f"最大值:{max(lst)}")
+    print(f"平均值:{statistics.mean(lst)}")
+    print(f"最小值:{min(lst)}")
+
+
+def lstmax(lst):
+    print(f"最大值:{max(lst)}")
+
+
+def numsum(lst):
+    print(f"总和:{sum(lst)}")
+
+
+while True:
+    choice = int(input("1:最值及平均值 2:最大值 3:总和 4:结束:"))
+    if choice == 4:
+        break
+    lst = [int(x) for x in input("请输入数字：").split()]
+    if choice == 1:
+        lstnum(lst)
+    elif choice == 2:
+        lstmax(lst)
+    elif choice == 3:
+        numsum(lst)
+    else:
+        print("输入错误")
