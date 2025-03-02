@@ -1,0 +1,37 @@
+def fun():
+    sum = 0
+
+    def adder(num):
+        nonlocal sum
+        sum += num
+        return sum
+
+    def reset(new_sum):
+        nonlocal sum
+        sum = new_sum
+
+    def getsum():
+        return sum
+
+    return (adder, reset, getsum)
+
+
+adder, reset, getsum = fun()
+set = input("是否设置初始值(y/n):")
+if set == 'y':
+    while True:
+        try:
+            new_sum = int(input("请输入初始值:"))
+            reset(new_sum)
+            break
+        except ValueError:
+            print("输入错误")
+nums = []
+while not nums:
+    try:
+        nums = list(map(int, input("请输入求和数（空格分隔）: ").split()))
+    except ValueError:
+        print("包含非数字输入，请重新输入！")
+for num in nums:
+    adder(num)
+print("求和结果:", getsum())
