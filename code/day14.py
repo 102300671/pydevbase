@@ -1,0 +1,68 @@
+"""
+面向对象的三大特性:
+    封装:将属性和方法封装到一个类中
+    继承:子类继承父类的属性和方法
+    多态:不同的子类对象调用相同的父类方法，产生不同的执行结果
+super的作用:调用父类的方法
+实例变量和类变量的区别:
+    实例变量:通过对象访问
+    类变量:通过类访问
+ @staticmethod 和 @classmethod的区别:
+    @staticmethod:静态方法，不需要传递self和cls
+    @classmethod:类方法，需要传递cls
+ 简述 __str__ 和 __init__ 的区别:
+    __str__:打印对象时调用，返回对象的描述信息
+    __init__:初始化对象时调用
+在Python中定义私有成员:前面加上__
+"""
+
+
+class NegativeAgeError(Exception):
+    def __init__(self, message="年龄不能为负数"):
+        self.message = message
+        super().__init__(self.message)
+
+
+def get_user_age():
+    try:
+        age = int(input("请输入年龄:"))
+        if age < 0:
+            raise NegativeAgeError
+        print("年龄是:", age)
+    except ValueError:
+        print("年龄必须是数字")
+    except NegativeAgeError as e:
+        print(e.message)
+
+
+class Animal:
+    def speak(self):
+        print("This is a generic animal sound")
+
+
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
+
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+
+
+def make_sound(animal):
+    animal.speak()
+
+
+for _ in range(2):
+    choice = input("1:年龄异常处理 2:多态和继承:")
+    if choice == "1":
+        for _ in range(3):
+            get_user_age()
+    elif choice == "2":
+        dog = Dog()
+        cat = Cat()
+        make_sound(dog)
+        make_sound(cat)
+    else:
+        print("Invalid choice")
