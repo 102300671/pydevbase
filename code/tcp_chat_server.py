@@ -18,6 +18,7 @@ class Tcp_server():
             message = input("[TCP服务器] 请输入消息:")
             if message == "exit":
                 self.client.send("TCP服务器即将关闭".encode())
+                self.client.close()
                 self.server.close()
                 print("[TCP服务器] 服务器已关闭")
                 break
