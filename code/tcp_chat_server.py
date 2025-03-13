@@ -3,10 +3,10 @@ import threading
 
 
 class Tcp_server():
-    def __init__(self, message):
+    def __init__(self, message,port):
         self.message = message
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server.bind(("0.0.0.0", 8023))
+        self.server.bind(("0.0.0.0", port))
         self.server.listen()
         print("[TCP 服务器] 等待连接...")
         self.client, addr = self.server.accept()
@@ -38,7 +38,9 @@ class Tcp_server():
                 print(f"[TCP服务器] 已重新连接:{addr}")
 
 
-tcp = Tcp_server("Hello Client")
+message = "Hello Client"
+port = int(input("请输入端口:"))
+tcp = Tcp_server(message, port)
 send_thread = threading.Thread(target=tcp.send_to)
 receive_thread = threading.Thread(target=tcp.receive)
 send_thread.start()
