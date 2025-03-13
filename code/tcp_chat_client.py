@@ -6,7 +6,7 @@ class Tcp_client():
     def __init__(self, message):
         self.message = message
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        print("[TCP客户端] 正在连接服务器")
+        print("[TCP客户端] 正在连接服务器...")
         self.client.connect(("192.168.114.12", 8023))
         print("[TCP客户端] 连接到服务器")
         self.client.send(self.message.encode())
