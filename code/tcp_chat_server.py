@@ -87,7 +87,6 @@ class TcpServer:
             self.running = False
 
     def shutdown(self):
-        """安全关闭服务器和客户端连接"""
         self.running = False
         with self.lock:
             if self.client:
