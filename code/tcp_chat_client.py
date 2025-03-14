@@ -15,8 +15,8 @@ class TcpClient:
     def initialize_connection(self):
         try:
             self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.client.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)  # [7](@ref)
-            self.client.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)  # 心跳检测[4](@ref)
+            self.client.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1) 
+            self.client.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1) 
             self.client.connect((self.ip, self.port))
             self.client.send(self.message.encode())
             print("连接成功")
