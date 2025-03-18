@@ -45,6 +45,7 @@ class TcpClient:
                     print("连接已关闭")
                     break
                 msg = data.decode()
+                print()
                 print(f"收到消息: {msg}")
                 if "服务器关闭" in msg:
                     self.graceful_shutdown()
