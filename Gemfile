@@ -42,6 +42,3 @@ gem "liquid"
 gem "addressable"
 gem "logger"
 gem "csv"
-gem "base64"
-gem "libruby"
-gem "json",platforms: :ruby
