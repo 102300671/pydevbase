@@ -84,7 +84,6 @@ GEM
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    libruby (0.6.0)
     liquid (4.0.4)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -163,7 +162,6 @@ PLATFORMS
 
 DEPENDENCIES
   addressable
-  base64
   csv
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.4.1)
@@ -173,8 +171,6 @@ DEPENDENCIES
   jekyll-polyglot
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
-  json
-  libruby
   liquid
   logger
   rouge
