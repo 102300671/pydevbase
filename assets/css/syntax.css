@@ -114,3 +114,32 @@
   color: #24292f;
   font-weight: bold;
 }
+
+/* 添加移动端适配 */
+@media (max-width: 768px) {
+  .highlight {
+    font-size: 14px; /* 调整字体大小 */
+    line-height: 1.5; /* 增加行高 */
+    overflow-x: auto; /* 启用水平滚动 */
+    padding: 10px; /* 增加内边距 */
+  }
+
+  .highlight table {
+    width: 100%; /* 表格宽度适配屏幕 */
+    display: block; /* 使表格在小屏幕上可滚动 */
+    overflow-x: auto;
+  }
+
+  .highlight table td {
+    padding: 3px; /* 减小单元格内边距 */
+  }
+
+  .highlight pre {
+    white-space: pre-wrap; /* 允许代码换行 */
+    word-wrap: break-word; /* 长单词换行 */
+  }
+
+  .highlight .linenos {
+    display: none; /* 隐藏行号（如果需要） */
+  }
+}
