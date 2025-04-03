@@ -44,6 +44,9 @@ kramdown:
       line_numbers: true   # 代码块是否显示行号
       start_line: 1        # 起始行号
   
+headers:
+  "/assets/videos/*":
+    - "Cache-Control: max-age=31536000"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
