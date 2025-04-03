@@ -9,7 +9,7 @@ layout: home
 
 ## 文章分类
 
-- [基础]({{ site.baseurl }}/category/base/)
-- [前端]({{ site.baseurl }}/category/frontend/)
+- [基础]({{ site.baseurl }}/category/base)
+- [前端]({{ site.baseurl }}/category/frontend)
 
 
