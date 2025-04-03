@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,8 @@
       .scroll {
         width: 300px;
         overflow: hidden;
+        color: pink;
+        font-size: 20px;
       }
       .one {
         color: red;
@@ -16,7 +17,7 @@
         color: yellow;
       }
       .three {
-        green;
+        color: green;
       }
       .four {
         color: purple;
@@ -30,8 +31,8 @@
     <h1>这是谁？</h1>
   </header>
   <main>
-    <p><img src="https://i.miji.bid/2025/04/03/aace85cfc92b0f21c3da6d6f5268c691.webp" alt="坤坤" height="77" title="这是坤坤">
-    <b>姓名：</b>蔡徐坤 <b>别称：</b>坤坤等</p><br>
+    <img src="https://i.miji.bid/2025/04/03/aace85cfc92b0f21c3da6d6f5268c691.webp" alt="坤坤" height="77" title="这是坤坤">
+    <b>姓名：</b>蔡徐坤 <b>别称：</b>坤坤等<br>
     <b>爱好：</b><br>
     <ul>
       <li><p class="one">唱</p></li>
@@ -42,6 +43,16 @@
   </main>
   <div id="scroll-text" class="scroll">信我，我不是小黑子</div>
   <script>
-    const textDiv=
+    const textDiv = document.getElementById("scroll-text");
+    let left = 0;
+    const speed = 3;
+    const intervalId = setInterval(() => {
+      left -= speed;
+      textDiv.style.transform = `translateX(${left}px)`;
+      if (left <= -textDiv.offsetWidth) {
+        left = textDiv.parentElement.offsetWidth;
+      }
+    }, 20);
+  </script>
 </body>
 </html>
