@@ -1,6 +1,6 @@
 ---
 layout: default
-title: base
+title: Base
 category: base
 ---
 

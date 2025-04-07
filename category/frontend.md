@@ -1,6 +1,6 @@
 ---
 layout: default
-title: frontend
+title: Frontend
 category: frontend
 ---
 
