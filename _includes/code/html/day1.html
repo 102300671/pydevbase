@@ -34,6 +34,16 @@
                 width: 800px;
             }
         }
+      img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            img {
+                width: 800px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -41,7 +51,7 @@
     <h1>这是谁？</h1>
   </header>
   <main>
-    <img src="https://i.miji.bid/2025/04/03/aace85cfc92b0f21c3da6d6f5268c691.webp" alt="坤坤" height="77" title="这是坤坤">
+    <img src="https://i.miji.bid/2025/04/03/aace85cfc92b0f21c3da6d6f5268c691.webp" alt="坤坤" title="这是坤坤">
     <b>姓名：</b>蔡徐坤 <b>别称：</b>坤坤等<br>
     <b>爱好：</b><br>
     <ul>
@@ -53,7 +63,7 @@
   </main>
   <video controls preload="metadata">
     <source src="{{"/assets/videos/day1.mp4" | relative_url}}" type="video/mp4">
-    您的不支持MP4格式视频
+    您的浏览器不支持MP4格式视频
   </video>
   <div id="scroll-text" class="scroll">信我，我不是小黑子</div>
   <script>
