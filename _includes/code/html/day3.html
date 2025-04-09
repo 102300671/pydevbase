@@ -1,0 +1,29 @@
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+      }
+      .notice {
+        background-color: red;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+    <main>
+      <div class="grid-container">
+        <img src="{{"/assets/img/1.png" | relative_url}}" width="180px" height="auto">
+        <p><span class="notice">公告</span><span style="font-weight:bold;">永劫无间</span><br><span style="color:lightgray;font-size:10px;">2024/08/20</span><br></p>
+      </div>
+    </main>
+  </body>
+</html>
