@@ -1,0 +1,55 @@
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+    .heart {
+      position: relative;
+      height: 200px;
+      width: 100px;
+      margin: auto auto;
+    }
+    .heart-half {
+      position: absolute;
+      top: 0;
+      width: 75px;
+      height: 80px;
+      background-color: red;
+      border-radius: 50px 50px 0 0;
+    }
+    .left-half {
+      left: 0;
+      transform: rotate(-45deg);
+      transform-origin: 100% 100%;
+    }
+    .right-half {
+      right: 0;
+      transform: rotate(45deg);
+      transform-origin: 0 100%;
+    }
+    .bottom {
+      background-color: red;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      margin: 113px auto;
+      transform: rotate(45deg);
+    }
+  </style>
+  </head>
+  <body>
+    <header>
+      <h1>❤️</h1>
+    </header>
+    <main>
+      <div class="heart">
+        <div class="heart-half left-half"></div>
+        <div class="heart-half right-half"></div>
+        <div class="bottom"></div>
+      </div>
+    </main>
+  </body>
+</html>
