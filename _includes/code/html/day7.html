@@ -1,0 +1,59 @@
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      body {
+        margin: 0 0;
+      }
+      .bg {
+        background-color: #4cf8d1;
+        height: 100%;
+        width: 100%;
+        padding: 100px 0;
+      }
+      .box {
+        height: 250px;
+        width: 85%;
+        background-color: #ffffff;
+        margin: 5px auto;
+        padding: 5px;
+      }
+      .box div {
+        text-align: center;
+      }
+      .box input {
+        height: 35px;
+        width: 75%;
+        margin-bottom: 3px;
+      }
+      p {
+        font-size: 13px;
+        text-align: center;
+      }
+      @media screen and (min-width: 768px) {
+           .box {
+                width: 400px;
+            }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>登录</h1>
+    </header>
+    <main>
+      <div class="bg">
+        <form class="box">
+        <h4 style="text-align:center;">登录</h4>
+        <div>
+          <input type="text" placeholder="账号">
+          <input type="password" placeholder="密码">
+          <input type="submit" value="提交">
+        </div>
+        <p>还没有账号?<a href="">注册</a></p>
+      </form>
+      </div>
+    </main>
+  </body>
+</html>
