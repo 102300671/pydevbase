@@ -1,0 +1,129 @@
+<style>
+.bg {
+  background: url(https://cdn.jsdelivr.net/gh/102300671/image@main/pydevbase/frontend/D9-0.jpg) no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 640px;
+  padding: 200px 60px;
+}
+.carousel {
+    position: relative;
+    max-width: 180px;
+    height: 180px;
+    margin: 200px 60px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+.carousel-button:hover {
+    background: rgba(0,0,0,0.8);
+}
+.prev {
+    left: 20px;
+}
+.next {
+    right: 20px;
+}
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.indicator.active {
+    background: rgba(255,255,255,0.9);
+}
+</style>
+<div class="bg">
+  <div class="carousel">
+    <div class="slides">
+        <div class="slide" style="background: #FF6B6B;">第一张</div>
+        <div class="slide" style="background: #4ECDC4;">第二张
+        </div>
+        <div class="slide" style="background: #45B7D1;">第三张
+        </div>
+    </div>
+    <button class="carousel-button prev">❮</button>
+    <button class="carousel-button next">❯</button>
+    <div class="indicators"></div>
+  </div>
+</div>
+<script>
+const carousel = document.querySelector('.carousel');
+const slides = document.querySelector('.slides');
+const indicatorsContainer = document.querySelector('.indicators');
+let currentIndex = 0;
+document.querySelectorAll('.slide').forEach((_, index) => {
+    const indicator = document.createElement('span');
+    indicator.classList.add('indicator');
+    if(index === 0) indicator.classList.add('active');
+    indicator.addEventListener('click', () => goToSlide(index));
+    indicatorsContainer.appendChild(indicator);
+});
+function goToSlide(index) {
+    currentIndex = index;
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    document.querySelectorAll('.indicator').forEach((ind, i) => {
+        ind.classList.toggle('active', i === currentIndex);
+    });
+}
+let autoPlay = setInterval(() => {
+    currentIndex = (currentIndex + 1) % document.querySelectorAll('.slide').length;
+    goToSlide(currentIndex);
+}, 5000);
+document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + document.querySelectorAll('.slide').length) % document.querySelectorAll('.slide').length;
+    goToSlide(currentIndex);
+    resetAutoplay();
+});
+document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % document.querySelectorAll('.slide').length;
+    goToSlide(currentIndex);
+    resetAutoplay();
+});
+function resetAutoplay() {
+    clearInterval(autoPlay);
+    autoPlay = setInterval(() => {
+        currentIndex = (currentIndex + 1) % document.querySelectorAll('.slide').length;
+        goToSlide(currentIndex);
+    }, 5000);
+}
+window.addEventListener('resize', () => {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+</script>

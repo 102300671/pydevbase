@@ -1,67 +1,57 @@
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF - 8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-       .box-green {
-            background-color: green;
-        }
-       .box1 {
-            height: 35px;
-            font-size: 12px;
-            padding-left: 2px;
-            background-color: green;
-        }
-       .box2 {
-            height: 80px;
-            width: 90%;
-            margin: 5px auto;
-            background-color: green;
-        }
-       .box3 {
-            height: 120px;
-            width: 90%;
-            margin: 5px auto;
-            display: flex;
-            justify-content: space-between;
-        }
-       .box3_1 {
-            width: 24%;
-            height: 150px;
-            background-color: green;
-        }
-       .box3_2 {
-            width: 24%;
-            height: 150px;
-            background-color: green;
-        }
-       .box4 {
-            height: 160px;
-            margin-top: 35px;
-            background-color: green;
-        }
-        @media (min-width: 768px) {
-           .box2,
-           .box3 {
-                width: 580px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>布局</h1>
-    </header>
-    <main>
-        <div class="box1 box-green">top</div>
-        <div class="box2 box-green"></div>
-        <div class="box3">
-            <div class="box3_1 box-green"></div>
-            <div class="box3_2 box-green"></div>
-            <div class="box3_2 box-green"></div>
-            <div class="box3_2 box-green"></div>
-        </div>
-        <div class="box4 box-green"></div>
-    </main>
-</body>
-</html>
+<style>
+  .box-green {
+    background-color: green;
+  }
+  .box1 {
+    height: 35px;
+    font-size: 12px;
+    padding-left: 2px;
+    background-color: green;
+  }
+  .box2 {
+    height: 80px;
+    width: 90%;
+    margin: 5px auto;
+    background-color: green;
+  }
+  .box3 {
+    height: 120px;
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .box3_1 {
+    width: 24%;
+    height: 150px;
+    background-color: green;
+  }
+  .box3_2 {
+    width: 24%;
+    height: 150px;
+    background-color: green;
+  }
+  .box4 {
+    height: 160px;
+    margin-top: 35px;
+    background-color: green;
+  }
+  @media (min-width: 768px) {
+    .box2,
+    .box3 {
+      width: 580px;
+    }
+  }
+</style>
+<header>
+  <h1>布局</h1>
+</header>
+<div class="box1 box-green">top</div>
+<div class="box2 box-green"></div>
+<div class="box3">
+  <div class="box3_1 box-green"></div>
+  <div class="box3_2 box-green"></div>
+  <div class="box3_2 box-green"></div>
+  <div class="box3_2 box-green"></div>
+</div>
+<div class="box4 box-green"></div>
