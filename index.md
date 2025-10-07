@@ -2,7 +2,7 @@
 layout: home
 ---
 码途钥匙  
-[源代码](https://github.com/102300671/102300671pydevbase.github.io/tree/main/_includes%2Fcode)
+[源代码](https://github.com/102300671/pydevbase/tree/main/_includes)
 
 ## 文章分类
 
